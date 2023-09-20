@@ -9,3 +9,42 @@
 .sidenav{
     width: 300px;
 }
+
+.menu-item{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li{
+        padding-left: 16px;
+        padding-right: 16px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        mat-icon{
+            margin-right: 16px;
+        }
+
+        &:hover{
+            background-color: rgba(0,0,0,0.1);
+        }
+    }
+
+
+}
+
+.logo-box{
+    border-bottom: 1px solid black;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.router-container{
+    padding-left: 56px;
+    padding-top: 16px;
+}
+
