@@ -1,4 +1,4 @@
-import { Component,inject } from '@angular/core';
+import { Component,OnInit,inject } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.component';
 import { User } from 'src/models/user.class';
@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss']
 })
-export class UserComponent {
+export class UserComponent implements OnInit{
 
   user: User = new User()
   firestore: Firestore = inject(Firestore)
@@ -20,14 +20,15 @@ export class UserComponent {
   constructor(public dialog: MatDialog){
     const db = collection(this.firestore, 'users');
     this.users$ = collectionData(db, { idField: 'id' });
-    console.log(this.users$);
-    
+  }
 
+  ngOnInit(): void {
     this.users$.subscribe((changes) => {
       this.allUsers = changes;
+      console.log(changes);
     });
-    
   }
+
   
   openDialog(){
     this.dialog.open(DialogAddUserComponent)
