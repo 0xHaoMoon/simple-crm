@@ -3,9 +3,9 @@
         <img src="/assets/img/1.webp" alt="" srcset="">
 
         <div class="user-details">
-            <h2>Max Mustermann </h2>
+            <h2>{{user.firstName}} {{user.lastName}} </h2>
             <br>
-            email@email.de <br>
+            {{user.email}} <br>
         </div>
     </mat-card-content>
   </mat-card>
@@ -14,6 +14,6 @@
   <mat-card class="mt-32">
     <mat-card-content>
     <mat-card-title>Address</mat-card-title>
-    <p>Matt Straße 1 <br> 76726 Mustaterasd</p>
+    <p>{{user.street}} <br> {{user.zipCode}} {{user.city}}</p>
     </mat-card-content>
   </mat-card>
