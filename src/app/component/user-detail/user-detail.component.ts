@@ -37,11 +37,15 @@ export class UserDetailComponent implements OnInit{
   } 
 
   editAddress(){
-    this.dialog.open(DialogEditAddressComponent)
+    const dialog = this.dialog.open(DialogEditAddressComponent)
+    dialog.componentInstance.user = new User(this.user.toJSON()); // Nutzer kopieren und weitergeben. es wird ein ein neues objekt erstellt mit dem JSON das bereits vorhanden ist weitergeben
+    dialog.componentInstance.userId = this.userId;
   }
 
   editUser(){
-    this.dialog.open(DialogEditUserComponent)
+    const dialog = this.dialog.open(DialogEditUserComponent)
+    dialog.componentInstance.user = new User(this.user.toJSON());
+    dialog.componentInstance.userId = this.userId;
   }
  
 }
