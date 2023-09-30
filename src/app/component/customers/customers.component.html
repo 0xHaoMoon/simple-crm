@@ -1,1 +1,25 @@
-<p>customers works!</p>
+<mat-card>
+    <mat-card-content>
+      <table class="user-table">
+        <tr>
+          <th>Name</th>
+          <th>Priority</th>
+          <th>City</th>
+        </tr>
+        <tr *ngFor="let customer of allCustomers" [routerLink]="['/customers/' + customer.id]" >
+          <td>{{customer.name}}</td>
+          <td>{{customer.prio}}</td>
+          <td>{{customer.city}}</td>
+        </tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+  
+  
+  <div class="button-container" (click)="openDialog()">
+      <button mat-fab color="primary" matTooltip="add Customer">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+  
+  
