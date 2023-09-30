@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { height: 100vh; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
@@ -16,5 +16,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mt-32{
     margin-top: 32px;
 }
+
+
+body{
+    background-image: url(/assets/img/blue-1634110_1920.png);
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 
 

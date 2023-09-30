@@ -1,5 +1,17 @@
 .mat-drawer-container{
-    height: 100vh;
+    height: 90vh;
+    background: transparent;
+}
+
+mat-toolbar{
+    background: rgba(0, 0, 0, 0.08);
+    color: white;
+}
+
+.mat-drawer{
+    background: rgba(0, 0, 0, 0.08);
+    border: unset;
+    color: white;
 }
 
 .pointer{
@@ -7,7 +19,7 @@
 }
 
 .sidenav{
-    width: 300px;
+    width: 150px;
 }
 
 .menu-item{
@@ -35,17 +47,15 @@
 
 }
 
-.logo-box{
-    border-bottom: 1px solid black;
-    height: 55px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .router-container{
     padding-left: 56px;
     padding-right: 56px;
     padding-top: 16px;
 }
+
+app-root{
+    background-image: url(../assets/img/blue-1634110_1920.png);
+}
+
 
