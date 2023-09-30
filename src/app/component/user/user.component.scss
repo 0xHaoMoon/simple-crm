@@ -1,6 +1,8 @@
 mat-card{
     background: rgba(255,255,255,.15);
     color: white;
+    max-height: 75vh;
+
 }
 
 button{
@@ -11,7 +13,10 @@ button{
 mat-card-content{
     padding-left: 0;
     padding-right: 0;
+    overflow-y: scroll;
+
 }
+
 
 .button-container{
     position: absolute;

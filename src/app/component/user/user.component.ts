@@ -20,6 +20,7 @@ export class UserComponent implements OnInit{
   constructor(public dialog: MatDialog){
     const db = collection(this.firestore, 'users');
     this.users$ = collectionData(db, { idField: 'id' });
+    
   }
 
   ngOnInit(): void {

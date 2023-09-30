@@ -30,6 +30,9 @@ import { UserDetailComponent } from './component/user-detail/user-detail.compone
 import {MatMenuModule} from '@angular/material/menu';
 import { DialogEditAddressComponent } from './component/dialog-edit-address/dialog-edit-address.component';
 import { DialogEditUserComponent } from './component/dialog-edit-user/dialog-edit-user.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatSortModule} from '@angular/material/sort';
+import { CustomersComponent } from './component/customers/customers.component';
 
 
 
@@ -46,7 +49,8 @@ import { DialogEditUserComponent } from './component/dialog-edit-user/dialog-edi
     DialogAddUserComponent,
     UserDetailComponent,
     DialogEditAddressComponent,
-    DialogEditUserComponent
+    DialogEditUserComponent,
+    CustomersComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +73,9 @@ import { DialogEditUserComponent } from './component/dialog-edit-user/dialog-edi
     provideFirestore(() => getFirestore()),
     MatProgressBarModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSelectModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
