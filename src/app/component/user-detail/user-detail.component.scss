@@ -1,9 +1,8 @@
 .user-detail-header{
     min-height: 250px;
-    background-color: #073E62;
     display:flex;
     align-items: flex-end;
-    color: white;
+
 
     img{
         height: 100px;
@@ -11,6 +10,11 @@
         object-fit: cover;
         border-radius: 100%;
     }
+}
+
+mat-card{
+    background: rgba(255,255,255,.15);
+    color: white;
 }
 
 .user-details{

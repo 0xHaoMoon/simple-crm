@@ -33,6 +33,10 @@ import { DialogEditUserComponent } from './component/dialog-edit-user/dialog-edi
 import {MatSelectModule} from '@angular/material/select';
 import {MatSortModule} from '@angular/material/sort';
 import { CustomersComponent } from './component/customers/customers.component';
+import { DialogAddCustomerComponent } from './component/dialog-add-customer/dialog-add-customer.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
 
 
 
@@ -50,7 +54,8 @@ import { CustomersComponent } from './component/customers/customers.component';
     UserDetailComponent,
     DialogEditAddressComponent,
     DialogEditUserComponent,
-    CustomersComponent
+    CustomersComponent,
+    DialogAddCustomerComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +80,9 @@ import { CustomersComponent } from './component/customers/customers.component';
     MatCardModule,
     MatMenuModule,
     MatSelectModule,
-    MatSortModule
+    MatSortModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

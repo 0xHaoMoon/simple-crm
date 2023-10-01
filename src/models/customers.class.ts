@@ -6,6 +6,7 @@ export class Customers{
     email:string;
     number:number;
     prio:string;
+    sales:number;
 
     constructor(obj?:any){
         this.name = obj ? obj.firstname : '';
@@ -15,17 +16,19 @@ export class Customers{
         this.email = obj ? obj.email:'';
         this.number = obj ? obj.number:'';
         this.prio = obj ? obj.prio:'';
+        this.sales = obj ? obj.sales:'';
     }
 
     public toJSON(){
         return {
-            Name: this.name,
+            name: this.name,
             street: this.street,
             zipCode: this.zipCode,
             city: this.city,
             email: this.email,
             number : this.number,
-            prio : this.prio
+            prio : this.prio,
+            sales : this.sales
         };
     }
 }
