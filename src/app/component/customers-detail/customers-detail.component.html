@@ -1,0 +1,35 @@
+<mat-card>
+    <mat-card-content class="user-detail-header">
+
+      <button [matMenuTriggerFor]="customermenu" mat-icon-button class="pin-right-upper-corner">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #customermenu="matMenu">
+        <button mat-menu-item (click)="editCustomer()">Edit</button>
+      </mat-menu>
+        <img src="/assets/img/1.webp" alt="" srcset="">
+
+        <div class="user-details">
+            <h2>{{customer.name}}</h2>
+            <br>
+            {{customer.prio}} <br>
+        </div>
+    </mat-card-content>
+  </mat-card>
+
+
+  <mat-card class="mt-32">
+    <mat-card-content>
+    <mat-card-title>Address</mat-card-title>
+    <p>{{customer.street}} <br> {{customer.zipCode}} {{customer.city}}</p>
+    </mat-card-content>
+  </mat-card>
+
+
+  <mat-card class="mt-32">
+    <mat-card-content>
+    <mat-card-title>Contact</mat-card-title>
+    <p>{{customer.number}} <br> {{customer.email}} </p>
+    </mat-card-content>
+  </mat-card>
+

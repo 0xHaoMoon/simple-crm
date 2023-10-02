@@ -18,7 +18,7 @@ import {MatTableDataSource} from '@angular/material/table';
 export class CustomersComponent implements OnInit{
 
 
-  user: Customers = new Customers()
+  customer: Customers = new Customers()
   firestore: Firestore = inject(Firestore)
   customers$: Observable<any>;
   allCustomers:any;

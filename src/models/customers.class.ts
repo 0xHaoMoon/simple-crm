@@ -9,7 +9,7 @@ export class Customers{
     sales:number;
 
     constructor(obj?:any){
-        this.name = obj ? obj.firstname : '';
+        this.name = obj ? obj.name : '';
         this.street = obj ? obj.street : '';
         this.zipCode = obj ? obj.zipCode : '';
         this.city = obj ? obj.city : '';

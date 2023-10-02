@@ -14,6 +14,7 @@ export class DialogAddCustomerComponent {
   firestore: Firestore = inject(Firestore)
   db;
   loading = false;
+  customerId:any;
   
 
  

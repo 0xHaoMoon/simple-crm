@@ -36,6 +36,8 @@ import { CustomersComponent } from './component/customers/customers.component';
 import { DialogAddCustomerComponent } from './component/dialog-add-customer/dialog-add-customer.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { CustomersDetailComponent } from './component/customers-detail/customers-detail.component';
+import { DialogEditCustomerComponent } from './component/dialog-edit-customer/dialog-edit-customer.component';
 
 
 
@@ -55,7 +57,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     DialogEditAddressComponent,
     DialogEditUserComponent,
     CustomersComponent,
-    DialogAddCustomerComponent
+    DialogAddCustomerComponent,
+    CustomersDetailComponent,
+    DialogEditCustomerComponent
   ],
   imports: [
     BrowserModule,
