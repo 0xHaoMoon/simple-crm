@@ -2,7 +2,22 @@ mat-card{
     background: rgba(255,255,255,.15);
     color: white;
     max-height: 75vh;
+    table{
+        background-color: transparent;
+        tr{
+            color: white;
+        }
+    }
+}
 
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+
+  }
+
+.mdc-text-field--filled{
+    background: rgba(255,255,255,.15);
 }
 
 button{
@@ -30,6 +45,7 @@ mat-card-content{
 
     tr{
         border-bottom: 1px solid rgba(0,0,0,0.4);
+        
 
 
         &:last-child{
@@ -44,12 +60,7 @@ mat-card-content{
             }
         }
         cursor: pointer;
-        &:first-child{
-            cursor: unset;
-            &:hover{
-                background-color: unset;
-            }
-        }
+
 
         &:hover{
             background-color: rgba(0,0,0,0.04);
@@ -66,6 +77,13 @@ mat-card-content{
         font-weight: 800;
         &:first-child{
             padding-left: 16px;
+        }
+
+        &:first-child{
+            cursor: unset;
+            &:hover{
+                background-color: unset;
+            }
         }
     }
 }

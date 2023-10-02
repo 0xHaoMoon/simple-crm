@@ -4,7 +4,6 @@ import { Customers } from 'src/models/customers.class';
 import { Firestore,collection, collectionData } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { DialogAddCustomerComponent } from '../dialog-add-customer/dialog-add-customer.component';
-import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 
@@ -13,11 +12,10 @@ import {MatTableDataSource} from '@angular/material/table';
   selector: 'app-customers',
   templateUrl: './customers.component.html',
   styleUrls: ['./customers.component.scss'],
-  
 
 
 })
-export class CustomersComponent implements AfterViewInit,OnInit{
+export class CustomersComponent implements OnInit{
 
 
   user: Customers = new Customers()
@@ -25,10 +23,10 @@ export class CustomersComponent implements AfterViewInit,OnInit{
   customers$: Observable<any>;
   allCustomers:any;
 
-  displayedColumns: string[] = ['name','priority'];
-  dataSource: MatTableDataSource<any>;
+  displayedColumns: String[] = ['name','prio'];
+  dataSource: MatTableDataSource<Customers>;
 
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
   @ViewChild(MatSort) sort!: MatSort;
 
   constructor(public dialog: MatDialog){
@@ -44,21 +42,17 @@ export class CustomersComponent implements AfterViewInit,OnInit{
       this.allCustomers = changes;
       console.log(changes);
       this.dataSource = new MatTableDataSource(changes);
+      this.dataSource.sort = this.sort;
     });
+    
   }
 
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
-  }
+
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
 
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
-    }
   }
 
 
