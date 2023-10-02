@@ -32,7 +32,6 @@ export class UserDetailComponent implements OnInit{
     
     docData(db).subscribe((user: any) => {
       this.user = new User(user);
-      console.log(this.user);
     })
   } 
 

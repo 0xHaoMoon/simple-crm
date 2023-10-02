@@ -1,36 +1,77 @@
+
 <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
 
-<h1 mat-dialog-title>Edit User</h1>
+<h1 mat-dialog-title>Add User</h1>
 <div mat-dialog-content>
    
-  <div class="gap10" style="margin-top: 10px;">
-    <mat-form-field appearance="outline">
-      <mat-label>First Name</mat-label>
-      <input [disabled]="loading" [(ngModel)]="user.firstName" matInput placeholder="Placeholder">
-    </mat-form-field>
+      <div class="gap10" style="margin-top: 10px;">
+        <mat-form-field appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input [disabled]="loading" [(ngModel)]="user.firstName" matInput placeholder="Placeholder">
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input [disabled]="loading" [(ngModel)]="user.lastName" matInput placeholder="Placeholder">
+        </mat-form-field>
+      </div>
 
-    <mat-form-field appearance="outline">
-      <mat-label>Last Name</mat-label>
-      <input [disabled]="loading" [(ngModel)]="user.lastName" matInput placeholder="Placeholder">
-    </mat-form-field>
-  </div>
+      <div >
+        <mat-form-field appearance="outline" class="width100">
+          <mat-label>email</mat-label>
+          <input [disabled]="loading" [(ngModel)]="user.email" matInput placeholder="Placeholder">
+        </mat-form-field>
+      </div>
 
-  <div >
-    <mat-form-field appearance="outline" class="width100">
-      <mat-label>email</mat-label>
-      <input [disabled]="loading" [(ngModel)]="user.email" matInput placeholder="Placeholder">
-    </mat-form-field>
-    </div>
+        <div >
+          <mat-form-field appearance="outline" class="width100">
+            <mat-label>number</mat-label>
+            <input [disabled]="loading" [(ngModel)]="user.number" matInput placeholder="Placeholder">
+          </mat-form-field>
+        </div>
 
 
-    <div>
-      <mat-form-field appearance="outline" class="width100">
-        <mat-label>Birthdate</mat-label>
-        <input [disabled]="loading" [(ngModel)]="birthDate" matInput [matDatepicker]="picker">
-        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-    </div>
+        <div>
+          <mat-form-field appearance="outline" class="width100">
+            <mat-label>Birthdate</mat-label>
+            <input [disabled]="loading" [(ngModel)]="birthDate" matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div >
+        <mat-form-field appearance="outline" class="width100">
+          <mat-label>Street + House No.</mat-label>
+          <input [disabled]="loading" [(ngModel)]="user.street" matInput placeholder="Placeholder">
+        </mat-form-field>
+        </div>
+
+        <div class="gap10">
+        <mat-form-field appearance="outline">
+          <mat-label>ZIP Code</mat-label>
+          <input [disabled]="loading" [(ngModel)]="user.zipCode" matInput placeholder="Placeholder">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>City</mat-label>
+          <input [disabled]="loading" [(ngModel)]="user.city" matInput placeholder="Placeholder">
+        </mat-form-field>
+        </div>
+
+        <div >
+          <mat-form-field appearance="outline" class="width100">
+            <mat-label>Role</mat-label>
+            <mat-select [disabled]="loading" [(ngModel)]="user.role">
+              <mat-option value="Salesperson">Salesperson</mat-option>
+              <mat-option value="Manager">Manager</mat-option>
+              <mat-option value="Logistic">Logistic</mat-option>
+              <mat-option value="Data Analyst">Data Analyst</mat-option>
+              <mat-option value="Marketing">Marketing</mat-option>
+              <mat-option value="Developer">Developer</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
 
 
 
@@ -41,3 +82,4 @@
   <button [disabled]="loading"  mat-button (click)="dialogRef.close()">Cancel</button>
   <button [disabled]="loading"  mat-button (click)="saveUser()">Save</button>
 </div>
+

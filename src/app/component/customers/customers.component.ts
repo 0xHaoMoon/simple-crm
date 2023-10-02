@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild,inject } from '@angular/core';
+import {Component, OnInit, ViewChild,inject } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { Customers } from 'src/models/customers.class';
 import { Firestore,collection, collectionData } from '@angular/fire/firestore';

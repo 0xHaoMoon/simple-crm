@@ -10,7 +10,7 @@
         <img src="/assets/img/1.webp" alt="" srcset="">
 
         <div class="user-details">
-            <h2>{{user.firstName}} {{user.lastName}} </h2>
+            <h2>{{user.lastName}} {{user.firstName}} </h2>
             <br>
             {{user.role}} <br>
         </div>
@@ -20,13 +20,16 @@
 
   <mat-card class="mt-32">
     <mat-card-content>
-        <button [matMenuTriggerFor]="addressmenu" mat-icon-button class="pin-right-upper-corner">
-            <mat-icon>more_vert</mat-icon>
-          </button>
-          <mat-menu #addressmenu="matMenu">
-            <button mat-menu-item (click)="editAddress()">Edit</button>
-          </mat-menu>
     <mat-card-title>Address</mat-card-title>
     <p>{{user.street}} <br> {{user.zipCode}} {{user.city}}</p>
     </mat-card-content>
   </mat-card>
+
+
+  <mat-card class="mt-32">
+    <mat-card-content>
+    <mat-card-title>Contact</mat-card-title>
+    <p>{{user.number}} <br> {{user.email}} </p>
+    </mat-card-content>
+  </mat-card>
+
