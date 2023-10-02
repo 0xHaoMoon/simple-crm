@@ -38,6 +38,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { CustomersDetailComponent } from './component/customers-detail/customers-detail.component';
 import { DialogEditCustomerComponent } from './component/dialog-edit-customer/dialog-edit-customer.component';
+import { NoticeComponent } from './component/notice/notice.component';
 
 
 
@@ -59,7 +60,8 @@ import { DialogEditCustomerComponent } from './component/dialog-edit-customer/di
     CustomersComponent,
     DialogAddCustomerComponent,
     CustomersDetailComponent,
-    DialogEditCustomerComponent
+    DialogEditCustomerComponent,
+    NoticeComponent
   ],
   imports: [
     BrowserModule,
