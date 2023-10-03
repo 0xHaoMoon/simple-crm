@@ -8,10 +8,16 @@ mat-card{
             color: white;
         }
     }
+
+    p{
+        font-size:50px;
+        text-align: center;
+    }
 }
 
 .mat-mdc-form-field {
     font-size: 14px;
+    width: 100%;
   }
 
 .mdc-text-field--filled{

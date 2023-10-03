@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { User } from 'src/models/user.class';
 import { DialogEditAddressComponent } from '../dialog-edit-address/dialog-edit-address.component';
 import { DialogEditUserComponent } from '../dialog-edit-user/dialog-edit-user.component';
+import { DialogDeleteUserComponent } from 'src/app/dialog-delete-user/dialog-delete-user.component';
 
 
 @Component({
@@ -46,5 +47,11 @@ export class UserDetailComponent implements OnInit{
     dialog.componentInstance.user = new User(this.user.toJSON());
     dialog.componentInstance.userId = this.userId;
   }
+
+  deleteUser(){
+    const dialog = this.dialog.open(DialogDeleteUserComponent)
+    dialog.componentInstance.user = new User(this.user.toJSON());
+    dialog.componentInstance.userId = this.userId;
+  }
  
-}
+} 

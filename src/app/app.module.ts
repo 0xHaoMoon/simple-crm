@@ -39,6 +39,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { CustomersDetailComponent } from './component/customers-detail/customers-detail.component';
 import { DialogEditCustomerComponent } from './component/dialog-edit-customer/dialog-edit-customer.component';
 import { NoticeComponent } from './component/notice/notice.component';
+import { DialogDeleteUserComponent } from './dialog-delete-user/dialog-delete-user.component';
 
 
 
@@ -61,7 +62,8 @@ import { NoticeComponent } from './component/notice/notice.component';
     DialogAddCustomerComponent,
     CustomersDetailComponent,
     DialogEditCustomerComponent,
-    NoticeComponent
+    NoticeComponent,
+    DialogDeleteUserComponent
   ],
   imports: [
     BrowserModule,
