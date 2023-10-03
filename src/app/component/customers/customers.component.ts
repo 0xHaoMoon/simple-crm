@@ -40,7 +40,6 @@ export class CustomersComponent implements OnInit{
   ngOnInit() {
     this.customers$.subscribe((changes) => {
       this.allCustomers = changes;
-      console.log(changes);
       this.dataSource = new MatTableDataSource(changes);
       this.dataSource.sort = this.sort;
     });

@@ -27,12 +27,10 @@ export class DialogAddCustomerComponent {
 
   saveCustomer():void{
 
-    console.log(this.customer)
     this.loading =true;
     
     addDoc(this.db, this.customer.toJSON()).then((result: any) => {
       this.loading = false;
-      console.log('finished', result);
       this.dialogRef.close()
 
     })

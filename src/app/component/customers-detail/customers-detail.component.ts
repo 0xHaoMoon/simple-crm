@@ -21,7 +21,6 @@ export class CustomersDetailComponent {
   ngOnInit(): void {
     this.route.paramMap.subscribe( paramMap => {
       this.customerId = paramMap.get('id');
-      console.log('got this id:', this.customerId)
       this.getUser();
       
     })
@@ -30,9 +29,7 @@ export class CustomersDetailComponent {
   getUser() {
     let db = doc(this.firestore, `customers/${this.customerId}`);    
     docData(db).subscribe((customer: any) => {
-      this.customer = new Customers(customer);  
-      console.log(customer.name);
-      
+      this.customer = new Customers(customer);        
     })
   } 
 

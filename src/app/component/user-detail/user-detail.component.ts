@@ -23,7 +23,6 @@ export class UserDetailComponent implements OnInit{
   ngOnInit(): void {
     this.route.paramMap.subscribe( paramMap => {
       this.userId = paramMap.get('id');
-      console.log('got id:', this.userId)
       this.getUser();
     })
   }

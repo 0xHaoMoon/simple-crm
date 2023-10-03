@@ -34,7 +34,6 @@ export class UserComponent implements OnInit{
   ngOnInit(): void {
     this.users$.subscribe((changes) => {
       this.allUsers = changes;
-      console.log(changes);
       this.dataSource = new MatTableDataSource(changes);
       this.dataSource.sort = this.sort;
     });

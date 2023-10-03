@@ -27,12 +27,10 @@ export class DialogAddUserComponent {
 
   saveUser():void{
     this.user.birthDate = this.birthDate.getTime();
-    console.log(this.user)
     this.loading =true;
     
     addDoc(this.db, this.user.toJSON()).then((result: any) => {
       this.loading = false;
-      console.log('finished', result);
       this.dialogRef.close()
 
     })
