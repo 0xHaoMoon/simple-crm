@@ -9,6 +9,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     gap: 10px;
 }
 
+
 .width100{
     width: 100%;
 }
@@ -59,3 +60,6 @@ h1{
     }
 }
 
+.column{
+    flex-direction: column;
+}

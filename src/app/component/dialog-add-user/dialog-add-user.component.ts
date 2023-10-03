@@ -29,10 +29,9 @@ export class DialogAddUserComponent {
     this.user.birthDate = this.birthDate.getTime();
     this.loading =true;
     
-    addDoc(this.db, this.user.toJSON()).then((result: any) => {
+    addDoc(this.db, this.user.toJSON()).then(() => {
       this.loading = false;
       this.dialogRef.close()
-
     })
   }
 }
