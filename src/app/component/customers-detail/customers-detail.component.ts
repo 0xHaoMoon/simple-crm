@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { Customers } from 'src/models/customers.class';
 import { DialogEditCustomerComponent } from '../dialog-edit-customer/dialog-edit-customer.component';
+import { DialogDeleteCustomerComponent } from 'src/app/dialog-delete-customer/dialog-delete-customer.component';
 
 @Component({
   selector: 'app-customers-detail',
@@ -39,6 +40,12 @@ export class CustomersDetailComponent {
 
   editCustomer(){
     const dialog = this.dialog.open(DialogEditCustomerComponent)
+    dialog.componentInstance.customer = new Customers(this.customer.toJSON());
+    dialog.componentInstance.customerId = this.customerId;
+  }
+
+  deleteCustomer(){
+    const dialog = this.dialog.open(DialogDeleteCustomerComponent)
     dialog.componentInstance.customer = new Customers(this.customer.toJSON());
     dialog.componentInstance.customerId = this.customerId;
   }

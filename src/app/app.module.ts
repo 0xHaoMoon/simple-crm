@@ -40,6 +40,7 @@ import { CustomersDetailComponent } from './component/customers-detail/customers
 import { DialogEditCustomerComponent } from './component/dialog-edit-customer/dialog-edit-customer.component';
 import { NoticeComponent } from './component/notice/notice.component';
 import { DialogDeleteUserComponent } from './dialog-delete-user/dialog-delete-user.component';
+import { DialogDeleteCustomerComponent } from './dialog-delete-customer/dialog-delete-customer.component';
 
 
 
@@ -63,7 +64,8 @@ import { DialogDeleteUserComponent } from './dialog-delete-user/dialog-delete-us
     CustomersDetailComponent,
     DialogEditCustomerComponent,
     NoticeComponent,
-    DialogDeleteUserComponent
+    DialogDeleteUserComponent,
+    DialogDeleteCustomerComponent
   ],
   imports: [
     BrowserModule,
