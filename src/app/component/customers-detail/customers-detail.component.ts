@@ -4,7 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { Customers } from 'src/models/customers.class';
 import { DialogEditCustomerComponent } from '../dialog-edit-customer/dialog-edit-customer.component';
-import { DialogDeleteCustomerComponent } from 'src/app/dialog-delete-customer/dialog-delete-customer.component';
+import { DialogDeleteCustomerComponent } from 'src/app/component/dialog-delete-customer/dialog-delete-customer.component';
 
 @Component({
   selector: 'app-customers-detail',

@@ -1,6 +1,6 @@
 .mat-drawer-container{
     height: 90vh;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.08);
 }
 
 mat-toolbar{
@@ -54,8 +54,6 @@ mat-toolbar{
     padding-top: 16px;
 }
 
-app-root{
-    background-image: url(../assets/img/blue-1634110_1920.png);
-}
+
 
 

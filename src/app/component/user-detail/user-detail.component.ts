@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { User } from 'src/models/user.class';
 import { DialogEditAddressComponent } from '../dialog-edit-address/dialog-edit-address.component';
 import { DialogEditUserComponent } from '../dialog-edit-user/dialog-edit-user.component';
-import { DialogDeleteUserComponent } from 'src/app/dialog-delete-user/dialog-delete-user.component';
+import { DialogDeleteUserComponent } from 'src/app/component/dialog-delete-user/dialog-delete-user.component';
 
 
 @Component({

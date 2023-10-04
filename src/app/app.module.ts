@@ -18,7 +18,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
@@ -39,8 +39,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { CustomersDetailComponent } from './component/customers-detail/customers-detail.component';
 import { DialogEditCustomerComponent } from './component/dialog-edit-customer/dialog-edit-customer.component';
 import { NoticeComponent } from './component/notice/notice.component';
-import { DialogDeleteUserComponent } from './dialog-delete-user/dialog-delete-user.component';
-import { DialogDeleteCustomerComponent } from './dialog-delete-customer/dialog-delete-customer.component';
+import { DialogDeleteUserComponent } from './component/dialog-delete-user/dialog-delete-user.component';
+import { DialogDeleteCustomerComponent } from './component/dialog-delete-customer/dialog-delete-customer.component';
+import { LoginComponent } from './component/login/login.component';
 
 
 
@@ -65,7 +66,8 @@ import { DialogDeleteCustomerComponent } from './dialog-delete-customer/dialog-d
     DialogEditCustomerComponent,
     NoticeComponent,
     DialogDeleteUserComponent,
-    DialogDeleteCustomerComponent
+    DialogDeleteCustomerComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -92,7 +94,8 @@ import { DialogDeleteCustomerComponent } from './dialog-delete-customer/dialog-d
     MatSelectModule,
     MatSortModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

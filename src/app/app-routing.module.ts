@@ -6,9 +6,13 @@ import { UserDetailComponent } from './component/user-detail/user-detail.compone
 import { CustomersComponent } from './component/customers/customers.component';
 import { CustomersDetailComponent } from './component/customers-detail/customers-detail.component';
 import { NoticeComponent } from './component/notice/notice.component';
+import { LoginComponent } from './component/login/login.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent  },
+
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent  },
   { path: 'dashboard', component: DashboardComponent  },
   { path: 'user', component: UserComponent  },
   { path: 'user/:id', component: UserDetailComponent  },
