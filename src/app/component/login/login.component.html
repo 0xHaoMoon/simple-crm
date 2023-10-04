@@ -2,7 +2,7 @@
 
     <div class="form-login">
     <mat-card>
-        <mat-card-content>
+        <mat-card-content class="gap10">
 
             <h1>Login</h1>
 
@@ -21,9 +21,13 @@
               </mat-form-field>
 
 
+              <div mat-dialog-actions class="gap10">
+                <button mat-raised-button >Register</button>
+                <button mat-raised-button >Login</button>
+              </div>
+
               <div mat-dialog-actions>
-                <button mat-button >Register</button>
-                <button mat-button >Login</button>
+                <button mat-raised-button (click)="guestLog()">Guest Log</button>
               </div>
         </mat-card-content>
     </mat-card>

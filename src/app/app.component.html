@@ -8,15 +8,14 @@
 </mat-toolbar>
 
 <div class="example-sidenav-content">
-  <mat-drawer-container class="mat-drawer-container" autosize>
-
-    <mat-drawer #drawer class="sidenav" [opened]="false" mode="side">
+  <mat-drawer-container autosize>
+    <mat-drawer #drawer class="sidenav" [opened]="true" mode="side">
       <ul class="menu-item">
         <li routerLink="/dashboard"><mat-icon>dashboard</mat-icon>Dashboard</li>
         <li routerLink="/user"><mat-icon>account_circle</mat-icon>User</li>
         <li routerLink="/customers"><mat-icon>groups</mat-icon>Customers</li>
         <li routerLink="/notice"><mat-icon>policy</mat-icon>Legal Notice</li>
-        <li routerLink="/logout"><mat-icon>logout</mat-icon>Log-Out</li>
+        <li routerLink="/login"><mat-icon>logout</mat-icon>Log-Out</li>
       </ul>
     </mat-drawer>
   

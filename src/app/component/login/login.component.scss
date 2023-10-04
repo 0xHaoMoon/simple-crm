@@ -25,6 +25,7 @@ mat-card{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
 }
 
 mat-card-content{
@@ -32,4 +33,11 @@ mat-card-content{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    h1{
+        color: black;
+    }
+}
+
+mat-form-field{
+    width: 100%;
 }
