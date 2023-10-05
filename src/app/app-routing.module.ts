@@ -7,11 +7,13 @@ import { CustomersComponent } from './component/customers/customers.component';
 import { CustomersDetailComponent } from './component/customers-detail/customers-detail.component';
 import { NoticeComponent } from './component/notice/notice.component';
 import { LoginComponent } from './component/login/login.component';
+import { RegisterComponent } from './component/register/register.component';
+
 
 const routes: Routes = [
 
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent  },
   { path: '', component: LoginComponent  },
   { path: 'dashboard', component: DashboardComponent  },
   { path: 'user', component: UserComponent  },

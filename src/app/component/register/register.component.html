@@ -4,17 +4,18 @@
     <mat-card>
         <mat-card-content class="gap10">
 
-            <h1>Login</h1>
+            <h1>Register</h1>
 
               <mat-form-field appearance="outline">
                 <mat-label>Enter your email</mat-label>
-                <input matInput  [formControl]="email" required >
-                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                <input matInput [formControl]="emailFormControl" [(ngModel)]="email">
+                <mat-error *ngIf="emailFormControl.invalid">{{getEmailErrorMessage()}}</mat-error>
               </mat-form-field>
 
               <mat-form-field appearance="outline">
                 <mat-label>Enter your password</mat-label>
-                <input matInput [type]="hide ? 'password' : 'text'" >
+                <input [(ngModel)]="password" matInput [type]="hide ? 'password' : 'text'" [formControl]="passwordFormControl" >
+                <mat-error *ngIf="passwordFormControl.invalid">{{ getPasswordErrorMessage()}}</mat-error>
                 <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                   <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                 </button>
@@ -22,13 +23,11 @@
 
 
               <div mat-dialog-actions class="gap10">
-                <button mat-raised-button routerLink="/register" >Register</button>
-                <button mat-raised-button >Login</button>
+                <button mat-raised-button routerLink="/login">Cancel</button>
+                <button mat-raised-button (click)="signIn()">Sign In</button>
               </div>
 
-              <div mat-dialog-actions>
-                <button mat-raised-button routerLink="/dashboard">Guest Log</button>
-              </div>
+
         </mat-card-content>
     </mat-card>
     </div>

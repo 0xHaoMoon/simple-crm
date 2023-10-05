@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
+import { getAuth } from "firebase/auth";
 
 @Component({
   selector: 'app-login',
@@ -10,6 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   hide = true;
   email = new FormControl('', [Validators.required, Validators.email]);
+ 
 
 
   constructor(private router: Router) { }

@@ -42,6 +42,7 @@ import { NoticeComponent } from './component/notice/notice.component';
 import { DialogDeleteUserComponent } from './component/dialog-delete-user/dialog-delete-user.component';
 import { DialogDeleteCustomerComponent } from './component/dialog-delete-customer/dialog-delete-customer.component';
 import { LoginComponent } from './component/login/login.component';
+import { RegisterComponent } from './component/register/register.component';
 
 
 
@@ -67,7 +68,8 @@ import { LoginComponent } from './component/login/login.component';
     NoticeComponent,
     DialogDeleteUserComponent,
     DialogDeleteCustomerComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
