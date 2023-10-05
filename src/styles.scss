@@ -20,11 +20,24 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 body{
-    background-image: url(/assets/img/blue-1634110_1920.png);
+    background-image: url('assets/img/blue-1634110_1920.png');
     background-size: cover;
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.fix{
+    background-image: url(assets/img/blue-1634110_1920.png);
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 ::-webkit-scrollbar {
