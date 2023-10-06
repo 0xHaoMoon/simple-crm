@@ -43,6 +43,7 @@ import { DialogDeleteUserComponent } from './component/dialog-delete-user/dialog
 import { DialogDeleteCustomerComponent } from './component/dialog-delete-customer/dialog-delete-customer.component';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
+import { SmallDeviceComponent } from './small-device/small-device.component';
 
 
 
@@ -69,7 +70,8 @@ import { RegisterComponent } from './component/register/register.component';
     DialogDeleteUserComponent,
     DialogDeleteCustomerComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    SmallDeviceComponent
   ],
   imports: [
     BrowserModule,
