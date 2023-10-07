@@ -15,6 +15,10 @@ mat-card{
     justify-content: center;
     align-items: center;
     color: black;
+    @media (max-height: 400px) {
+        height: 300px;
+      }
+
 }
 
 mat-card-content{

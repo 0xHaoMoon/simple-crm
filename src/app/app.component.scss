@@ -1,6 +1,10 @@
 .mat-drawer-container{
     height: 90vh;
     background: rgba(0, 0, 0, 0.08);
+
+    @media (max-height: 600px) {
+        height: 82vh;
+      }
 }
 
 mat-toolbar{
