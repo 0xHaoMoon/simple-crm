@@ -19,14 +19,14 @@ mat-card{
     width: 15vh;
     height: 20vh;
 
-    @media (max-height: 400px) {
+    @media (max-height: 415px) {
         width: 20vh;
         height: 28vh;
       }
   }
 
   mat-card-title{
-        @media (max-height: 400px) {
+        @media (max-height: 415px) {
             font-size: 4vh ;
       }
   }

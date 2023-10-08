@@ -13,6 +13,30 @@ mat-card{
         font-size:50px;
         text-align: center;
     }
+
+}
+
+.mobile{
+    @media (max-height: 415px) {
+        display: flex;
+        height: 16.9vh;
+
+        mat-card{
+            height: 11vh;
+            width: 50vw;
+        }
+
+        mat-mdc-form-field{
+            height: 21vh;
+        }
+      }
+  }
+
+.mat-mdc-form-field-subscript-wrapper {
+
+    @media (max-height: 415px) {
+        height: 0vh;
+    }
 }
 
 
@@ -42,6 +66,10 @@ mat-card-content{
     position: absolute;
     bottom: 40px;
     right: 30px;
+    @media (max-height: 415px) {
+        bottom: 22px;
+        right: 0px;
+    }
 }
 
 .user-table{
