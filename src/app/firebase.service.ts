@@ -1,6 +1,7 @@
 import { Injectable,inject } from '@angular/core';
-import { Firestore, collection,doc} from '@angular/fire/firestore';
+import { Firestore, collection,collectionData,doc} from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,21 @@ import { Observable } from 'rxjs';
 export class FirebaseService {
   firestore: Firestore = inject(Firestore)
 
-  constructor() { }
+
+  users$: Observable<any>;
+  allUsers:any;
+
+  constructor() {
+    //get the ID
+    this.users$ = collectionData(this.getUsersRef(),{ idField: 'id' });
+
+    // subscribe users$
+   this.users$.subscribe((changes)=>{
+   this.allUsers = changes;
+    })
+
+    this.allUsers.unsubscribe
+   }
 
 
   //get collection

@@ -14,7 +14,6 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 export class UserComponent implements OnInit{
 
-  user: User = new User()
   firestore: Firestore = inject(Firestore)
   users$: Observable<any>;
   allUsers:any;
