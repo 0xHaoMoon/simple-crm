@@ -66,6 +66,10 @@ mat-toolbar-row{
     padding-left: 56px;
     padding-right: 56px;
     padding-top: 16px;
+
+    @media (max-height: 420px) {
+        padding-top: 0px;
+      }
 }
 
 
