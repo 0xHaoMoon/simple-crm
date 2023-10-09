@@ -8,6 +8,12 @@ mat-card{
             color: white;
         }
     }
+
+    p{
+        font-size:50px;
+        text-align: center;
+    }
+
 }
 
 .mobile{
@@ -26,15 +32,22 @@ mat-card{
       }
   }
 
+.mat-mdc-form-field-subscript-wrapper {
+
+    @media (max-height: 415px) {
+        height: 0vh;
+    }
+}
+
+
+
 
 .mat-mdc-form-field {
     font-size: 14px;
     width: 100%;
   }
 
-.mdc-text-field--filled{
-    background: rgba(255,255,255,.15);
-}
+
 
 button{
     background-color: rgba(255,255,255,.15);
@@ -53,7 +66,6 @@ mat-card-content{
     position: absolute;
     bottom: 40px;
     right: 30px;
-
     @media (max-height: 415px) {
         bottom: 22px;
         right: 0px;
